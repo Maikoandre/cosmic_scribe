@@ -1,0 +1,517 @@
+{
+  "main": {
+    "id": "7e2676394635a8c1",
+    "type": "split",
+    "children": [
+      {
+        "id": "1632b19ea46f427f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ba5010fbce070fb6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Nine Heavens/Inhabitants/Social Structure of the Hollow Edge Sect.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Social Structure of the Hollow Edge Sect"
+            }
+          },
+          {
+            "id": "c811e702c1a42d88",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Nine Heavens/Inhabitants/Hollow Edge Sect/Political Posture of the Hollow Edge Sect.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Political Posture of the Hollow Edge Sect"
+            }
+          },
+          {
+            "id": "67177581c36c317a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Nine Heavens/Inhabitants/Hollow Edge Sect/Folded Presence Art.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Folded Presence Art"
+            }
+          },
+          {
+            "id": "d405c9974a6bc243",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Nine Heavens/Inhabitants/Major Factions v2.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Major Factions v2"
+            }
+          },
+          {
+            "id": "33eafadb4ee93d40",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Nine Heavens/Inhabitants/Void-Severing Sword Sect.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Void-Severing Sword Sect"
+            }
+          },
+          {
+            "id": "9ea5e300f138440d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Nine Heavens/Inhabitants/Hollow Edge Sect/Social Structure of the Hollow Edge Sect.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Social Structure of the Hollow Edge Sect"
+            }
+          },
+          {
+            "id": "742f1bd55a0a34b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Void-Treading Severance.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Void-Treading Severance"
+            }
+          },
+          {
+            "id": "9e74c36c13218aa8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Nine Heavens/Cultivation/Cultivation Path of The Three Treasures & The Great.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Cultivation Path of The Three Treasures & The Great"
+            }
+          },
+          {
+            "id": "2c2f32f24c0778d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Nine Heavens/Cultivation/True Immortal Realm.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "True Immortal Realm"
+            }
+          },
+          {
+            "id": "585f313980ad5cf0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hollow Edge Sect/Techniques/Folded Presence Art.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Folded Presence Art"
+            }
+          },
+          {
+            "id": "74f5533bd5c8e56e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hollow Edge Sect/Techniques/Folded Presence Art.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Folded Presence Art"
+            }
+          },
+          {
+            "id": "9297c577b1233e11",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Nine Heavens/Inhabitants/Major Factions & Sects.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Major Factions & Sects"
+            }
+          },
+          {
+            "id": "fb710ee9a1c5f88d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hollow Edge Sect/Ancient Historical Record.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ancient Historical Record"
+            }
+          },
+          {
+            "id": "06096a3b26b4b425",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hollow Edge Sect/Ancient Historical Record.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ancient Historical Record"
+            }
+          },
+          {
+            "id": "7699158cde0f7238",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Nine Great Orthodoxies.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "The Nine Great Orthodoxies"
+            }
+          },
+          {
+            "id": "18b5317fda2b104e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Nine Heavens/Inhabitants/The Nine Shadows.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "The Nine Shadows"
+            }
+          },
+          {
+            "id": "328f8719cd8c5fe8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Nine Heavens/Cultivation/Cultivation Path of The Three Treasures & The Great Dao.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Cultivation Path of The Three Treasures & The Great Dao"
+            }
+          },
+          {
+            "id": "728c38f958863bf1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Immortal World/Cultivation Realms of the Immortal World.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Cultivation Realms of the Immortal World"
+            }
+          },
+          {
+            "id": "a09a5bc2c3f84ebe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Immortal World/Cultivation Realms of the Immortal World.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Cultivation Realms of the Immortal World"
+            }
+          },
+          {
+            "id": "f7382c34375d960f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hollow Edge Sect/Battle at the Shattered Cloud Steps.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Battle at the Shattered Cloud Steps"
+            }
+          },
+          {
+            "id": "f4532239a106df4c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Path of the Eternal Sovereign.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Path of the Eternal Sovereign"
+            }
+          },
+          {
+            "id": "1104c7f7b9d3f0bb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Path of the Eternal Sovereign.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Path of the Eternal Sovereign"
+            }
+          },
+          {
+            "id": "9a87c5443ddfd39e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 1"
+            }
+          },
+          {
+            "id": "70d0270874e07adc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Nine Heavens/Locations/1. First Heaven.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. First Heaven"
+            }
+          }
+        ],
+        "currentTab": 23
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "edfb8547fe072412",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "189c07f714392873",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false
+          },
+          "icon": "lucide-folder-closed",
+          "title": "Files"
+        }
+      },
+      {
+        "id": "f46a7e167123cc14",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "Search"
+        }
+      },
+      {
+        "id": "93b88bdda6f21546",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "Tags"
+        }
+      },
+      {
+        "id": "962bb3a33a43fd25",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {},
+          "icon": "lucide-bookmark",
+          "title": "Bookmarks"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "ddf7f1ab507fff46",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "42bd5d70b58fe97f",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "Celestial Meridian Path.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "Backlinks"
+        }
+      },
+      {
+        "id": "cd4d394f0f6e82ab",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "Outgoing links"
+        }
+      },
+      {
+        "id": "7c37fab033f896ba",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "Outline"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "70d0270874e07adc",
+  "lastOpenFiles": [
+    "The Eight Desolates/Cultivation/Scriptures/Heaven-Dominating Fiendcelestial Scripture.md",
+    "The Eight Desolates/Inhabitants/Main Races.md",
+    "The Eight Desolates/Cultivation/Scriptures/Desolation Codex.md",
+    "The Eight Desolates/Concepts/Withered Qi.md",
+    "The Eight Desolates/Concepts/Desolate Immortality.md",
+    "The Eight Desolates/Concepts/Desolate Essence.md",
+    "The Eight Desolates/Concepts/Desolate Baptisms.md",
+    "The Eight Desolates/Cultivation/Scriptures/Forbidden Scriptures.md",
+    "The Eight Desolates/Cultivation/Desolate Techniques.md",
+    "Myriad Veil Lore/Dao Collapse.md",
+    "Myriad Veil Lore/Cosmic Timeline.md",
+    "The Eight Desolates/Eight Desolates.md",
+    "The Eight Desolates/Inhabitants/Silent Lord of the Waning Echo.md",
+    "Myriad Veil Lore/Ancient Desolate.md",
+    "Immortal World/Cultivation Realms of the Immortal World.md",
+    "Frigid School hierarchy.md",
+    "Untitled 1.md",
+    "Path of the Eternal Sovereign.md",
+    "Frigid School",
+    "Celestial Meridian Path.md",
+    "Hollow Edge Sect/Battle at the Shattered Cloud Steps.md",
+    "Untitled.md",
+    "Immortal World",
+    "The Nine Heavens/Cultivation/Cultivation Path of The Three Treasures & The Great Dao.md",
+    "Names.md",
+    "Myriad Veil Lore/The Ethereal Conflux.md",
+    "Rumored Reclusive Sects.md",
+    "The Nine Heavens/Inhabitants/The Nine Shadows.md",
+    "Hollow Edge Sect/Social Structure",
+    "Hollow Edge Sect/Locations",
+    "Hollow Edge Sect/Techniques",
+    "Hollow Edge Sect",
+    "The Nine Heavens/Concepts/Dao",
+    "The Ancient Desolate",
+    "Myriad Veil Lore",
+    "The Netherworld/Concepts"
+  ]
+}
