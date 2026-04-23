@@ -1,7 +1,7 @@
 ---
 id: dao_weapons
-type: locations
-system: locations
+type: techniques
+system: techniques
 affiliation: unknown
 canon: True
 ---

@@ -1,7 +1,7 @@
 ---
 id: dao_collapse
-type: concepts
-system: concepts
+type: events
+system: events
 affiliation: unknown
 canon: True
 ---

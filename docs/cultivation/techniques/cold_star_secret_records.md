@@ -1,7 +1,7 @@
 ---
 id: cold_star_secret_records
-type: paths
-system: cultivation
+type: techniques
+system: techniques
 affiliation: unknown
 canon: True
 ---

@@ -1,7 +1,7 @@
 ---
 id: edge_of_the_empty_veil
 type: techniques
-system: cultivation
+system: techniques
 affiliation: hollow_edge_sect
 canon: True
 ---

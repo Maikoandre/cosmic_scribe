@@ -1,7 +1,7 @@
 ---
 id: star_dao
-type: locations
-system: locations
+type: concepts
+system: daos
 affiliation: unknown
 canon: True
 ---
