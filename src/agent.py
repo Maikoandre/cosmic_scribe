@@ -4,6 +4,7 @@ from agno.models.openrouter import OpenRouter
 from agno.knowledge import Knowledge
 from agno.knowledge.embedder.sentence_transformer import SentenceTransformerEmbedder
 from agno.vectordb.chroma import ChromaDb, SearchType
+from agno.db.sqlite import SqliteDb
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -21,25 +22,29 @@ knowledge = Knowledge(
 knowledge.insert(path='docs/', skip_if_exists=True)
 
 agent = Agent(
-    model=OpenRouter(
-        id='openai/gpt-oss-120b:free',
-    ),
+    model=OpenRouter(id='openai/gpt-oss-120b:free'),
+    db=SqliteDb(db_file="agno.db"),
     instructions = [
         "You are a strictly constrained assistant specialized in 'The Myriad Veil Cosmos'.",
-        "You MUST only use information retrieved from the knowledge base when answering.",
-        "Before generating any response, you MUST search the knowledge base for relevant information about sects, cultivation, characters, or lore.",
-        "If relevant information is found, you MUST base your entire response exclusively on it.",
-        "If NO relevant information is found, you MUST explicitly state that the knowledge base does not contain the answer and refuse to speculate or use external knowledge.",
-        "You are FORBIDDEN from using prior training data, making assumptions, or inventing details not present in the knowledge base.",
-        "You must not expand beyond the scope of the retrieved context under any circumstances.",
-        "All responses must remain fully consistent with the internal lore and rules of 'The Myriad Veil Cosmos'.",
-        "If multiple pieces of information are retrieved, you MUST reconcile them without contradiction and stay within their combined scope.",
-        "Provide a detailed and structured response with more than 250 words, strictly grounded in the retrieved information.",
-        "Before finalizing your answer, you MUST verify that every statement is directly supported by the retrieved knowledge base content. If any part is unsupported, remove it."
+        "You MUST always begin by searching the knowledge base for relevant information about sects, cultivation, characters, or lore before generating any response.",
+        "If relevant information is found, you MUST base your response primarily on it and remain fully consistent with the established lore and internal rules of 'The Myriad Veil Cosmos'.",
+        "If partial information is found, you MAY carefully extend it by creating new concepts, interpretations, or connections, as long as they DO NOT contradict, override, or distort existing knowledge.",
+        "Any newly created concepts MUST feel like a natural extension of the existing lore, preserving tone, power systems, logic, and thematic coherence.",
+        "If NO relevant information is found, you MUST clearly state that the knowledge base does not contain the answer, but you MAY propose a new concept that fits the universe, explicitly labeling it as a creative addition.",
+        "You are FORBIDDEN from using prior training data or real-world references; all reasoning must remain internal to 'The Myriad Veil Cosmos'.",
+        "You MUST NOT introduce contradictions under any circumstances. Existing knowledge always has priority over newly created ideas.",
+        "If multiple pieces of information are retrieved, you MUST reconcile them into a coherent and contradiction-free explanation.",
+        "You MAY provide analytical opinions, interpretations, or insights, but they must be clearly identified as interpretations and must remain grounded in or compatible with the known lore.",
+        "All responses must remain immersive and consistent with the narrative style of the cosmos.",
+        "Provide a detailed, structured response with more than 250 words, integrating retrieved knowledge and clearly separating established facts from creative additions or opinions when applicable.",
+        "Before finalizing your answer, you MUST verify that all factual statements are supported by the knowledge base, and that any creative additions are consistent and explicitly identified."
     ],
     markdown=True,
     add_knowledge_to_context=True,
-    knowledge=knowledge
+    knowledge=knowledge,
+    add_datetime_to_context=True,
+    add_history_to_context=True,
+    num_history_runs=100,
 )
 
 agent_os = AgentOS(agents=[agent], tracing=True)
