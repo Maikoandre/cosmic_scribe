@@ -1,0 +1,83 @@
+---
+id: 1_first_heaven
+type: locations
+system: locations
+affiliation: unknown
+canon: True
+---
+
+# 🌌 The First Heaven (第一天 • Dì Yī Tiān)
+
+> *“Where the winds first stirred and light kissed void — there rose the First Heaven.”*
+
+---
+
+## 🪐 Overview
+
+The **First Heaven** is the **lowest yet oldest** of the **Nine Heavens**, said to be the **foundation layer** of the celestial cosmos. It is the birthplace of the earliest Daoist principles and the stage where the **Heavenly Dao first awoke**. Though not the most powerful, it is the most **primordial**, and no Heaven may stand without it.
+
+---
+
+## ✨ Nature & Laws
+
+- **Primordial Simplicity**: Unlike the higher heavens adorned with divine cities and sects, the First Heaven is vast and almost barren — resembling a pure plane of undisturbed Qi and elemental harmony.
+- **Neutral Heaven**: It is neither wholly divine nor punitive — a balancing realm.
+- **Natural Law’s Origin**: All higher Daoic rules (gravity, essence, life-flow, causality) anchor their threads here.
+- **Time-Dilated**: A moment here may equal centuries in mortal realms. It is a place for long cultivation, reflection, and awakening.
+
+---
+
+## 🏞️ Landscape
+
+| Region | Description |
+|--------|-------------|
+| **Voidglass Steppe** | Crystalline plains that record the echoes of the Dao’s first whispers. |
+| **Yuan River** | A river of colorless Qi, said to be the very breath of the First Dao Ancestor. |
+| **Cloudroot Spires** | Floating stone peaks that house meditating ancient beasts and hermits. |
+| **Stone of First Light** | An ancient monolith that bleeds starlight. Cultivators who touch it glimpse past incarnations. |
+
+---
+
+## 🧘 Cultivation Significance
+
+- Ideal for **Foundational Cultivation** and **Body Reforging**.
+- Said to **refine soul impurities** upon entry.
+- Sectless cultivators often ascend here to **transcend their roots** and shed karmic burdens.
+
+---
+
+## 🕊️ Inhabitants
+
+- **Primordial Beasts**: Serene, near-extinct beings who never left the Heaven of their origin.
+- **Ancient Hermits**: Cultivators who abandoned clan, sect, and identity for silent Dao comprehension.
+- **Silent Sky Watchers**: Thought to be the first watchers of the stars, they are more concept than creature.
+
+> Many say no one truly owns the First Heaven — for it is the only realm not under dominion or war.
+
+---
+
+## 📜 Legacy & Lore
+
+- **First Ascendants**: The very first beings to touch the Dao arose here. Some became Judges of the Halls. Others dissolved into Daoic Law.
+- **Origin of Techniques**: Many ancient scriptures, particularly the root of elemental and void techniques, claim origin from this realm.
+- **Heavenly Pillars**: It is believed that the First Heaven holds one of the **Nine Pillars of Creation**, anchoring the cosmos itself.
+
+---
+
+## 📘 Related Concepts
+
+- [[Nine Heavens]]
+- [[Heavenly Dao]]
+- [[Primordial Dao]]
+- [[Halls of Judgment]]
+- [[Dao Collapse]]
+
+---
+
+## 🔮 Sayings
+
+> “Before Samsara spun, the First Heaven listened.”
+
+> “He who kneels in the First Heaven never bows again.”
+
+> “Even the Dao knelt here, once.”
