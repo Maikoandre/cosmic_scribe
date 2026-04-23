@@ -11,4 +11,5 @@ dependencies = [
     "huggingface-hub",
     "chromadb",
     "python-dotenv>=1.2.2",
+    "docling>=2.91.0",
 ]
