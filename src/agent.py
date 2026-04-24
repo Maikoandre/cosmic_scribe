@@ -7,6 +7,7 @@ from agno.knowledge.embedder.sentence_transformer import SentenceTransformerEmbe
 from agno.vectordb.chroma import ChromaDb, SearchType
 from agno.db.sqlite import SqliteDb
 from dotenv import load_dotenv
+from tools.save import save_to_markdown
 
 load_dotenv()
 
@@ -24,8 +25,10 @@ knowledge.insert(path='docs/', skip_if_exists=True)
 
 agent = Agent(
     model=Nvidia(id="qwen/qwen3.5-122b-a10b"),
+    tools=[save_to_markdown],
     db=SqliteDb(db_file="agno.db"),
     instructions = [
+        "If I ask you to save your response, use the 'save_to_markdown' tool.",
         "You are a strictly constrained assistant specialized in 'The Myriad Veil Cosmos'.",
         "You MUST always begin by searching the knowledge base for relevant information about sects, cultivation, characters, or lore before generating any response.",
         "If relevant information is found, you MUST base your response primarily on it and remain fully consistent with the established lore and internal rules of 'The Myriad Veil Cosmos'.",
@@ -46,7 +49,7 @@ agent = Agent(
     knowledge=knowledge,
     add_datetime_to_context=True,
     add_history_to_context=True,
-    num_history_runs=100,
+    debug_mode=True,
 )
 
 agent_os = AgentOS(agents=[agent], tracing=False)
