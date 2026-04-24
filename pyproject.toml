@@ -12,4 +12,5 @@ dependencies = [
     "chromadb",
     "python-dotenv>=1.2.2",
     "docling>=2.91.0",
+    "openrouter>=0.9.1",
 ]

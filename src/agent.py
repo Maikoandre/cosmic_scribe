@@ -1,6 +1,7 @@
 from agno.agent import Agent
 from agno.os import AgentOS
 from agno.models.openrouter import OpenRouter
+from agno.models.nvidia import Nvidia
 from agno.knowledge import Knowledge
 from agno.knowledge.embedder.sentence_transformer import SentenceTransformerEmbedder
 from agno.vectordb.chroma import ChromaDb, SearchType
@@ -22,7 +23,7 @@ knowledge = Knowledge(
 knowledge.insert(path='docs/', skip_if_exists=True)
 
 agent = Agent(
-    model=OpenRouter(id='google/gemma-4-26b-a4b-it:free'),
+    model=Nvidia(id="minimaxai/minimax-m2.7"),
     db=SqliteDb(db_file="agno.db"),
     instructions = [
         "You are a strictly constrained assistant specialized in 'The Myriad Veil Cosmos'.",
