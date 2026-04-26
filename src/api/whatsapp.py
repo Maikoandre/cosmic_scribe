@@ -27,6 +27,9 @@ async def websocket_endpoint(websocket: WebSocket):
 def process_whatsapp_message(number: str, text: str):
     response = agent.run(text)
     agent_answer = response.content
+    if not agent_answer:
+        print("Error: No content from agent.")
+        return
 
     send_url = f"{EVOLUTION_URL}/message/sendText/{INSTANCE_NAME}"
     headers = {"apikey": API_KEY, "Content-Type": "application/json"}

@@ -1,7 +1,7 @@
 [project]
-name = "knowledge-rag"
+name = "cosmic-scribe"
 version = "0.1.0"
-description = "Add your description here"
+description = "The Myriad Veil Cosmos Assistant"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
