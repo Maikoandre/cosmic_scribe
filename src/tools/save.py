@@ -1,4 +1,3 @@
-# Define the tool
 def save_to_markdown(content: str, filename: str = "response.md") -> str:
     """Saves the provided content to a markdown file.
     
