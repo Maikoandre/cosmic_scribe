@@ -43,12 +43,9 @@ def process_telegram_message(chat_id: int, text: str):
     print(f"DEBUG: Agent answer length: {len(agent_answer)}")
 
     send_url = f"https://api.telegram.org/bot{telegram_token}/sendMessage"
-    chunk_size = 1000
-    for i in range(0, len(agent_answer), chunk_size):
-        chunk = agent_answer[i:i + chunk_size]
-        payload = {"chat_id": chat_id, "text": chunk}
-        resp = requests.post(send_url, json=payload)
-        print(f"DEBUG: Telegram API response: {resp.status_code} - {resp.text}")
+    payload = {"chat_id": chat_id, "text": agent_answer}
+    resp = requests.post(send_url, json=payload)
+    print(f"DEBUG: Telegram API response: {resp.status_code} - {resp.text}")
 
 @app.post("/webhook")
 async def handle_telegram(request: Request, background_tasks: BackgroundTasks):
