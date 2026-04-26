@@ -14,4 +14,7 @@ dependencies = [
     "docling>=2.91.0",
     "openrouter>=0.9.1",
     "mcp>=1.27.0",
+    "fastapi>=0.136.0",
+    "uvicorn>=0.44.0",
+    "requests>=2.33.1",
 ]
