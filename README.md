@@ -1,6 +1,7 @@
 # Cosmic Scribe - The Myriad Veil Cosmos
 
-Este projeto é um sistema de **RAG (Retrieval-Augmented Generation)** projetado para atuar como um assistente especializado no universo fictício "The Myriad Veil Cosmos". Ele utiliza uma base de conhecimento local para garantir que as respostas sejam precisas e fundamentadas exclusivamente na lore (história) fornecida.
+Este projeto é um sistema de **RAG (Retrieval-Augmented Generation)** especializado em worldbuilding. Ele não apenas consulta a base de conhecimento do universo **The Myriad Veil Cosmos**, mas também é capaz de expandi-la de forma consistente. O agente segue regras estritas para evitar contradições, garantindo que novas técnicas de cultivo, seitas e personagens respeitem as leis e o tom da lore original.
+
 
 ## 🚀 Tecnologias
 
