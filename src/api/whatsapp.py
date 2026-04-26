@@ -1,8 +1,15 @@
 from fastapi import FastAPI, Request, WebSocket, BackgroundTasks
 import requests
 import os
+import logging
 from src.core.agent import agent
 from dotenv import load_dotenv
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s [%(levelname)s] %(name)s - %(message)s"
+)
+logger = logging.getLogger(__name__)
 """
 $ uvicorn src.api.whatsapp:app --reload --port 8000
 """
@@ -28,8 +35,9 @@ def process_whatsapp_message(number: str, text: str):
     response = agent.run(text)
     agent_answer = response.content
     if not agent_answer:
-        print("Error: No content from agent.")
+        logger.error("No content from agent.")
         return
+
 
     send_url = f"{EVOLUTION_URL}/message/sendText/{INSTANCE_NAME}"
     headers = {"apikey": API_KEY, "Content-Type": "application/json"}
@@ -45,7 +53,8 @@ async def handle_whatsapp(request: Request, background_tasks: BackgroundTasks):
     from_me = key.get("fromMe", False)
     number = remote_jid.split("@")[0] if remote_jid else ""
     
-    print(f"Texto: {message_text} | Remetente: {number} | fromMe: {from_me}")
+    logger.info(f"Texto: {message_text} | Remetente: {number} | fromMe: {from_me}")
+
 
     if message_text and number and not from_me:
         background_tasks.add_task(process_whatsapp_message, number, message_text)

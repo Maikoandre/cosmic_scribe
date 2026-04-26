@@ -1,9 +1,17 @@
 from fastapi import FastAPI, Request, WebSocket, BackgroundTasks
 import os
 import requests
+import logging
 from dotenv import load_dotenv
 from contextlib import asynccontextmanager
 from src.core.agent import agent
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s [%(levelname)s] %(name)s - %(message)s"
+)
+logger = logging.getLogger(__name__)
+
 
 """
 $ uvicorn src.api.telegram:app --reload --port 8000
@@ -19,7 +27,7 @@ async def lifespan(app: FastAPI):
     try:
         requests.post(send_url, json={"url": webhook_url})
     except Exception as e:
-        print(f"Failed to set webhook: {e}")
+        logger.error(f"Failed to set webhook: {e}")
     yield
 
 app = FastAPI(lifespan=lifespan)
@@ -34,27 +42,25 @@ async def websocket_endpoint(websocket: WebSocket):
     except Exception:
         pass
 
-
-
 def process_telegram_message(chat_id: int, text: str):
-    print("DEBUG: Running agent in background...")
+    logger.info("Running agent in background...")
     response = agent.run(text)
     agent_answer = response.content
-    print(f"DEBUG: Agent answer length: {len(agent_answer)}")
+    logger.debug(f"Agent answer length: {len(agent_answer)}")
 
     send_url = f"https://api.telegram.org/bot{telegram_token}/sendMessage"
     payload = {"chat_id": chat_id, "text": agent_answer}
     resp = requests.post(send_url, json=payload)
-    print(f"DEBUG: Telegram API response: {resp.status_code} - {resp.text}")
+    logger.debug(f"Telegram API response: {resp.status_code} - {resp.text}")
 
 @app.post("/webhook")
 async def handle_telegram(request: Request, background_tasks: BackgroundTasks):
     data = await request.json()
-    print(f"DEBUG: Received data: {data}")
+    logger.debug(f"Received data: {data}")
     message = data.get("message", {})
     msg_chat_id = message.get("chat", {}).get("id")
     text = message.get("text")
-    print(f"DEBUG: Extracted chat_id: {msg_chat_id} | text: {text}")
+    logger.debug(f"Extracted chat_id: {msg_chat_id} | text: {text}")
 
     if msg_chat_id and text:
         background_tasks.add_task(process_telegram_message, msg_chat_id, text)
