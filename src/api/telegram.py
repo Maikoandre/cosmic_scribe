@@ -5,6 +5,7 @@ import logging
 from dotenv import load_dotenv
 from contextlib import asynccontextmanager
 from src.core.agent import agent
+import src.core.logging
 
 logger = logging.getLogger(__name__)
 
@@ -42,7 +43,13 @@ def process_telegram_message(chat_id: int, text: str):
     logger.info("Running agent in background...")
     response = agent.run(text)
     agent_answer = response.content
+    if not agent_answer:
+        logger.error("No content from agent.")
+        return
+
+        
     logger.debug(f"Agent answer length: {len(agent_answer)}")
+
 
     send_url = f"https://api.telegram.org/bot{telegram_token}/sendMessage"
     payload = {"chat_id": chat_id, "text": agent_answer}

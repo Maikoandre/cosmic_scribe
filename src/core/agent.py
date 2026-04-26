@@ -1,6 +1,4 @@
 from agno.agent import Agent
-import src.core.logging
-
 from agno.tools.telegram import TelegramTools
 from agno.models.nvidia import Nvidia
 from agno.knowledge import Knowledge

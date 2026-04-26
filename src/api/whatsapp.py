@@ -4,6 +4,7 @@ import os
 import logging
 from src.core.agent import agent
 from dotenv import load_dotenv
+import src.core.logging
 
 logger = logging.getLogger(__name__)
 """
