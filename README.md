@@ -5,11 +5,21 @@ Este projeto é um sistema de **RAG (Retrieval-Augmented Generation)** projetado
 ## 🚀 Tecnologias
 
 - **[Agno](https://agno.com/)**: Framework para construção de agentes de IA.
-- **Nvidia AI Foundation**: Interface para modelos de linguagem (usando `qwen/qwen3.5-122b-a10b`).
+- **Nvidia AI Foundation**: Interface para modelos de linguagem.
 - **ChromaDB**: Banco de dados vetorial para armazenamento e busca de documentos.
 - **Sentence Transformers**: Utiliza o modelo local `all-MiniLM-L6-v2` para gerar embeddings.
 - **FastAPI**: Interface web para interação com o agente.
 - **Python 3.11+** com gerenciamento de dependências via **uv**.
+
+## 📁 Estrutura do Projeto
+
+- `src/core/agent.py`: Configuração centralizada do Agente.
+- `src/api/telegram.py`: Endpoint de Webhook para Telegram.
+- `src/api/whatsapp.py`: Endpoint de Webhook para WhatsApp.
+- `src/tools/save.py`: Implementação da ferramenta de persistência de arquivos.
+- `docs/`: Base de conhecimento e destino de novas entradas de lore.
+- `data/chromadb/`: Banco de dados vetorial persistente.
+- `data/agno.db`: Histórico de sessões do agente (SQLite).
 
 ## 🛠️ Configuração
 
@@ -27,6 +37,7 @@ Este projeto é um sistema de **RAG (Retrieval-Augmented Generation)** projetado
     Crie um arquivo `.env` na raiz do projeto:
     ```text
     NVIDIA_API_KEY=sua_chave_aqui
+    TELEGRAM_TOKEN=seu_token_aqui
     ```
 
 4.  **Adicione seus documentos**:
@@ -34,24 +45,20 @@ Este projeto é um sistema de **RAG (Retrieval-Augmented Generation)** projetado
 
 ## 📖 Como Usar
 
-### Servidor de Desenvolvimento
-Para iniciar o servidor FastAPI e usar a interface web do Agno:
+### Executar a API Central (AgentOS)
 ```bash
-uv run fastapi dev src/agent.py
+uv run fastapi dev main.py
 ```
 
-### Funcionalidades Especiais
-- **Persistência de Lore**: O agente possui a ferramenta `save_to_markdown`. Peça ao agente para "salvar a resposta em um arquivo" para persistir novas entradas de história na pasta `docs/`.
-- **RAG Local**: Busca semântica em toda a documentação dentro de `docs/`.
-- **Modo Debug**: Ativado por padrão para mostrar chamadas de ferramentas e logs detalhados no terminal.
+### Executar Integração Telegram
+```bash
+uvicorn src.api.telegram:app --reload --port 8000
+```
 
-## 📁 Estrutura do Projeto
-
-- `src/agent.py`: Configuração principal do Agente e servidor FastAPI.
-- `src/tools/save.py`: Implementação da ferramenta de persistência de arquivos.
-- `docs/`: Base de conhecimento e destino de novas entradas de lore.
-- `tmp/chromadb/`: Banco de dados vetorial persistente.
-- `agno.db`: Histórico de sessões do agente (SQLite).
+### Executar Integração WhatsApp
+```bash
+uvicorn src.api.whatsapp:app --reload --port 8000
+```
 
 ---
 Criado para exploração imersiva e expansão de lore.
