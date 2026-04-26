@@ -1,6 +1,6 @@
 from docling.document_converter import DocumentConverter
 
-source = "docs/One Call API_ 2.5.html"  # document per local path or URL
+source = ""
 converter = DocumentConverter()
 result = converter.convert(source)
 with open("output.md", "w") as f:

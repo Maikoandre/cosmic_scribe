@@ -6,10 +6,6 @@ from dotenv import load_dotenv
 from contextlib import asynccontextmanager
 from src.core.agent import agent
 
-logging.basicConfig(
-    level=logging.DEBUG,
-    format="%(asctime)s [%(levelname)s] %(name)s - %(message)s"
-)
 logger = logging.getLogger(__name__)
 
 
@@ -22,7 +18,7 @@ load_dotenv()
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     telegram_token = os.getenv("TELEGRAM_TOKEN")
-    webhook_url = "https://adena-readjustable-anaya.ngrok-free.dev/webhook"
+    webhook_url = os.getenv("NGROK_URL")
     send_url = f"https://api.telegram.org/bot{telegram_token}/setWebhook"
     try:
         requests.post(send_url, json={"url": webhook_url})
@@ -50,8 +46,15 @@ def process_telegram_message(chat_id: int, text: str):
 
     send_url = f"https://api.telegram.org/bot{telegram_token}/sendMessage"
     payload = {"chat_id": chat_id, "text": agent_answer}
-    resp = requests.post(send_url, json=payload)
-    logger.debug(f"Telegram API response: {resp.status_code} - {resp.text}")
+    try:
+        resp = requests.post(send_url, json=payload, timeout=10)
+        if not resp.ok:
+            logger.error(f"Telegram API failed: {resp.status_code} - {resp.text}")
+        else:
+            logger.debug(f"Telegram API response: {resp.status_code} - {resp.text}")
+    except Exception as e:
+        logger.error(f"Telegram API exception: {e}")
+
 
 @app.post("/webhook")
 async def handle_telegram(request: Request, background_tasks: BackgroundTasks):
@@ -66,5 +69,3 @@ async def handle_telegram(request: Request, background_tasks: BackgroundTasks):
         background_tasks.add_task(process_telegram_message, msg_chat_id, text)
 
     return {"status": "processed"}
-
-    # https://adena-readjustable-anaya.ngrok-free.dev/

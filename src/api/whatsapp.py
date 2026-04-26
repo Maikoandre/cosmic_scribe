@@ -5,10 +5,6 @@ import logging
 from src.core.agent import agent
 from dotenv import load_dotenv
 
-logging.basicConfig(
-    level=logging.DEBUG,
-    format="%(asctime)s [%(levelname)s] %(name)s - %(message)s"
-)
 logger = logging.getLogger(__name__)
 """
 $ uvicorn src.api.whatsapp:app --reload --port 8000
@@ -42,7 +38,12 @@ def process_whatsapp_message(number: str, text: str):
     send_url = f"{EVOLUTION_URL}/message/sendText/{INSTANCE_NAME}"
     headers = {"apikey": API_KEY, "Content-Type": "application/json"}
     payload = {"number": number, "text": agent_answer}
-    requests.post(send_url, json=payload, headers=headers)
+    try:
+        resp = requests.post(send_url, json=payload, headers=headers, timeout=10)
+        if not resp.ok:
+            logger.error(f"WhatsApp API failed: {resp.status_code} - {resp.text}")
+    except Exception as e:
+        logger.error(f"WhatsApp API exception: {e}")
 
 @app.post("/webhook")
 async def handle_whatsapp(request: Request, background_tasks: BackgroundTasks):
