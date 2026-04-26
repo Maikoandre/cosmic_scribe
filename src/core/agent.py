@@ -26,7 +26,7 @@ knowledge.insert(path='docs/', skip_if_exists=True)
 agent = Agent(
     name="central_agent",
     model=Nvidia(id="qwen/qwen3.5-122b-a10b"),
-    tools=[TelegramTools(token=os.getenv("TELEGRAM_TOKEN"), chat_id="6354092683"), save_to_markdown],
+    tools=[TelegramTools(token=os.getenv("TELEGRAM_TOKEN"), chat_id=os.getenv("TELEGRAM_CHAT_ID")), save_to_markdown],
     db=SqliteDb(db_file="data/agno.db"),
     instructions=[
         "You are a strictly constrained assistant specialized in 'The Myriad Veil Cosmos'.",
