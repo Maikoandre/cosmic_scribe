@@ -16,7 +16,7 @@ knowledge = Knowledge(
         collection="docs",
         path="data/chromadb",
         persistent_client=True,
-        search_type=SearchType.vector,
+        search_type=SearchType.hybrid,
         embedder=SentenceTransformerEmbedder(id="sentence-transformers/all-MiniLM-L6-v2")
     )
 )
@@ -45,7 +45,7 @@ agent = Agent(
         "Before finalizing your answer, you MUST verify that all factual statements are supported by the knowledge base, and that any creative additions are consistent and explicitly identified."
     ],
     markdown=True,
-    add_knowledge_to_context=True,
+    search_knowledge=True,
     knowledge=knowledge,
     add_datetime_to_context=True,
     add_history_to_context=True,

@@ -9,7 +9,5 @@ __pycache__/
 .env.local
 .python-version
 data/
-uv.lock
-pyproject.toml
 Dockerfile
 .dockerignore
